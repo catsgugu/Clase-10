@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de mi Página</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tinos', 'Times New Roman', Times, serif; }
+        svg { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <!-- El contenido visible de tu página web va aquí -->
+    <h1>Hola Mundo</h1>
+    <p>Esta es mi tarea jaja.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1155 600"
+   onclick="alert('SIX SEVEEEEEEN')">
+  <style>
+    .grid { fill: none; stroke: lightgray; }
+    .axis-line { stroke: black; }
+    .axis-label { font-size: 12px; text-anchor: middle; dominant-baseline: central; }
+    .tick-label { font-size: 10px; text-anchor: end; fill: currentColor; dominant-baseline: central; }
+    .radar { fill-opacity: 0.2; stroke-width: 1; transition: all ease .4s; }
+    .radar:hover { fill-opacity: .3; transition: all ease .4s; }
+    .legend-label { font-size: 10px; dominant-baseline: central; }
+  </style>
+
+  <defs>
+    <clipPath id="chart-clip">
+      <rect width="1155" height="600" />
+    </clipPath>
+  </defs>
+
+  <rect width="1155" height="600" fill="#fff" />
+
+  <g clip-path="url(#chart-clip)">
+    <g transform="translate(400,315)">
+
+      <!-- Círculos de la grilla (0 a 90) -->
+      <g>
+        <circle r="257" class="grid" />
+        <circle r="228" class="grid" />
+        <circle r="200" class="grid" />
+        <circle r="171" class="grid" />
+        <circle r="143" class="grid" />
+        <circle r="114" class="grid" />
+        <circle r="86" class="grid" />
+        <circle r="57" class="grid" />
+        <circle r="29" class="grid" />
+      </g>
+
+      <!-- Ejes y etiquetas -->
+      <g>
+        <line class="axis-line" x2="0" y2="-285" />
+        <text class="axis-label" x="0" y="-295">Acdémicos con Doctorado</text>
+
+        <line class="axis-line" x2="271.05" y2="-88.07" />
+        <text class="axis-label" x="280.56" y="-91.16">Estudiantes por académicos</text>
+
+        <line class="axis-line" x2="167.52" y2="230.57" />
+        <text class="axis-label" x="173.4" y="238.66">Red de investigación internacional</text>
+
+        <line class="axis-line" x2="-167.52" y2="230.57" />
+        <text class="axis-label" x="-173.4" y="238.66">Papers por facultad</text>
+
+        <line class="axis-line" x2="-271.05" y2="-88.07" />
+        <text class="axis-label" x="-280.56" y="-91.16">Citaciones por Paper</text>
+      </g>
+
+      <!-- Escala vertical -->
+      <g transform="translate(0,-285)" fill="none">
+        <path stroke="currentColor" d="M-6,0.5H0.5V285.5H-6" />
+        <g stroke="currentColor">
+          <line x2="-6" y1="28.5" y2="28.5" />
+          <line x2="-6" y1="56.5" y2="56.5" />
+          <line x2="-6" y1="85.5" y2="85.5" />
+          <line x2="-6" y1="113.5" y2="113.5" />
+          <line x2="-6" y1="142.5" y2="142.5" />
+          <line x2="-6" y1="171.5" y2="171.5" />
+          <line x2="-6" y1="199.5" y2="199.5" />
+          <line x2="-6" y1="228.5" y2="228.5" />
+          <line x2="-6" y1="256.5" y2="256.5" />
+          <line x2="-6" y1="285.5" y2="285.5" />
+        </g>
+        <text class="tick-label" x="-9" y="28.5" fill="currentColor">90</text>
+        <text class="tick-label" x="-9" y="56.5" fill="currentColor">80</text>
+        <text class="tick-label" x="-9" y="85.5" fill="currentColor">70</text>
+        <text class="tick-label" x="-9" y="113.5" fill="currentColor">60</text>
+        <text class="tick-label" x="-9" y="142.5" fill="currentColor">50</text>
+        <text class="tick-label" x="-9" y="171.5" fill="currentColor">40</text>
+        <text class="tick-label" x="-9" y="199.5" fill="currentColor">30</text>
+        <text class="tick-label" x="-9" y="228.5" fill="currentColor">20</text>
+        <text class="tick-label" x="-9" y="256.5" fill="currentColor">10</text>
+        <text class="tick-label" x="-9" y="285.5" fill="currentColor">0</text>
+      </g>
+
+      <!-- Series -->
+      <g>
+        <!-- Pontificia Universidad Católica de Chile -->
+        <g fill="#1f77b4" stroke="#1f77b4">
+          <polygon class="radar" points="0,-281 194.97,-63.35 166.93,229.76 -163.4,224.91 -210.18,-68.29" />
+          <g stroke="none">
+            <circle cx="0" cy="-281" r="1" />
+            <circle cx="194.97" cy="-63.35" r="1" />
+            <circle cx="166.93" cy="229.76" r="1" />
+            <circle cx="-163.4" cy="224.91" r="1" />
+            <circle cx="-210.18" cy="-68.29" r="1" />
+          </g>
+        </g>
+
+        <!-- Universidad de Chile -->
+        <g fill="#ff7f0e" stroke="#ff7f0e">
+          <polygon class="radar" points="0,-205 62.77,-20.4 166.93,229.76 -166.93,229.76 -208.28,-67.67" />
+          <g stroke="none">
+            <circle cx="0" cy="-205" r="1" />
+            <circle cx="62.77" cy="-20.4" r="1" />
+            <circle cx="166.93" cy="229.76" r="1" />
+            <circle cx="-166.93" cy="229.76" r="1" />
+            <circle cx="-208.28" cy="-67.67" r="1" />
+          </g>
+        </g>
+
+        <!-- Universidad de Concepción -->
+        <g fill="#2ca02c" stroke="#2ca02c">
+          <polygon class="radar" points="0,-182 101.76,-33.06 165.76,228.14 -149.89,206.3 -238.72,-77.56" />
+          <g stroke="none">
+            <circle cx="0" cy="-182" r="1" />
+            <circle cx="101.76" cy="-33.06" r="1" />
+            <circle cx="165.76" cy="228.14" r="1" />
+            <circle cx="-149.89" cy="206.3" r="1" />
+            <circle cx="-238.72" cy="-77.56" r="1" />
+          </g>
+        </g>
+
+        <!-- Universidad de Santiago de Chile -->
+        <!-- OJO: los 3 últimos puntos son VALORES DE EJEMPLO (el archivo original estaba cortado). Reemplázalos por los reales. -->
+        <g fill="#d62728" stroke="#d62728">
+          <polygon class="radar" points="0,-84 80.84,-26.27 82.3,113.3 -70.5,97.1 -85.6,-27.8" />
+          <g stroke="none">
+            <circle cx="0" cy="-84" r="1" />
+            <circle cx="80.84" cy="-26.27" r="1" />
+            <circle cx="82.3" cy="113.3" r="1" />
+            <circle cx="-70.5" cy="97.1" r="1" />
+            <circle cx="-85.6" cy="-27.8" r="1" />
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Leyenda -->
+    <g transform="translate(850,250)">
+      <rect y="0"  width="12" height="12" fill="#1f77b4" /><text class="legend-label" x="20" y="6">Pontificia Universidad Católica de Chile (PUC)</text>
+      <rect y="22" width="12" height="12" fill="#ff7f0e" /><text class="legend-label" x="20" y="28">Universidad de Chile (UCH)</text>
+      <rect y="44" width="12" height="12" fill="#2ca02c" /><text class="legend-label" x="20" y="50">Universidad de Concepción (Udec)</text>
+      <rect y="66" width="12" height="12" fill="#d62728" /><text class="legend-label" x="20" y="72">Universidad de Santiago de Chile (USACH)</text>
+    </g>
+  </g>
+</svg>
+
+</body>
+</html>
